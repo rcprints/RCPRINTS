@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RC Prints - 3D Printing Services</title>
+  <style>
+   html {
+      scroll-behavior: smooth;
+    } 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #1a1a1a;
+      animation: slideDown 1s ease-out;
+    }
+    header .logo-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    @keyframes slideDown {
+      from {transform: translateY(-100%); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    .hero {
+      background: linear-gradient(to right, #1e1e2f, #121212);
+      text-align: center;
+      padding: 100px 20px;
+      animation: fadeIn 2s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+    .cta-btn {
+      padding: 12px 25px;
+      background: #00ffcc;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta-btn:hover {
+      background: #00ccaa;
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffcc;
+    }
+    .card {
+      background: #1f1f1f;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 800px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .gallery-item {
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .desc {
+      padding: 10px;
+      text-align: center;
+      background-color: #f2f2f2;
+      color: #000;
+    }
+    .profile-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .owner-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: moveSpin 6s linear infinite;
+    }
+    @keyframes moveSpin {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(20px, 20px) rotate(180deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+    footer {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .instagram-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .instagram-link img {
+      width: 12px;
+      height: 12px;
+      position: relative;
+      top: 1px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-text">RC PRINTS</div>
+    <nav>
+      <a href="#services" style="color:#00ffcc; margin-right:20px;">Services</a>
+      <a href="#products" style="color:#00ffcc; margin-right:20px;">Products</a>
+      <a href="#portfolio" style="color:#00ffcc; margin-right:20px;">Our Work</a>
+      <a href="#owner-profile" style="color:#00ffcc; margin-right:20px;">Owner</a>
+      <a href="#contact" style="color:#00ffcc;">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Transforming Ideas Into Reality</h1>
+    <p>High-quality, affordable, and custom 3D printing solutions for everyone.</p>
+    <a href="#contact" class="cta-btn">Get Started</a>
+  </section>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <a href="#contact"><div class="card">
+      <h3>Custom 3D Prints</h3>
+      <p>From prototypes to personalized gifts, we print it all.</p>
+    </div></a>
+        </p>
+    <div class="upload-box">
+      <h3>Upload Your 3D Model File</h3>
+      <p>If you already have a design file, send it to us and we’ll print and deliver it!</p>
+      <input type="file" accept=".stl,.obj,.zip" />
+      <button onclick="alert('Thanks! We will contact you shortly.')">Upload</button>
+    </div>
+  </section>
+
+    <a href="#contact"><div class="card">
+      <h3>Prototyping</h3>
+      <p>Fast turnaround for product prototypes and concept models.</p>
+    </div></a>
+    <a href="#contact"><div class="card">
+      <h3>Design Assistance</h3>
+      <p>Help with 3D modeling or modifying your STL files.</p>
+    </div></a>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Products</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US7bf6b58c69a44d/design/2024-05-20_6e26aecbda736.png?x-oss-process=image/resize,w_1920/format,webp" alt="Phone Stand">
+        <div class="desc">3D Printed Phone Stand</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/USbd81711985e67a/design/2025-05-13_4472892efcb188.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="Dyson Nozzle">
+        <div class="desc">Dyson Nozzle</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US73f12bce8968b/design/2025-05-12_47257a11b407.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="Vernier caliper card">
+        <div class="desc">Vernier caliper card</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US41dd192440360c/design/2025-01-24_b76b5c8b960fa8.jpeg?x-oss-process=image/resize,w_1000/format,webp" alt="Door hook hangers">
+        <div class="desc">Door hook for 7 clothes hangers</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://media.printables.com/media/prints/835659/images/6438652_f56c516e-dbfe-454a-8395-1ee4a9f3e5f7_bf5f02d0-1c8b-450c-b40c-832f44c803b6/thumbs/inside/1280x960/jpg/dsc_0101.webp" alt="Toy">
+        <div class="desc">3D Printed Toy (dragon)</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US580d069dfef5c2/design/2025-05-13_3649fac1b83b98.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="Toy">
+        <div class="desc">3D Printed Toy (fidget all in one)</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US1e68072494d919/design/2024-11-21_70e848521de5e.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="Monstera variegata plant with 6 leaf coasters">
+        <div class="desc">Monstera variegata plant with 6 leaf coasters</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US40c825243002ad/design/2023-10-26_d7337254675f3.webp?x-oss-process=image/resize,w_1000/format,webp" alt="Gaming Finger Chopsticks 3 sizes">
+        <div class="desc">Gaming Finger Chopsticks 3 sizes</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/USf2728b3c03d7b4/design/2024-10-12_baba78b97c4eb.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="SD Cards Rolodex Stand Organizer">
+        <div class="desc">SD Cards Rolodex Stand Organizer</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/DSM00000001013292/design/2025-01-19_jy2ulyre0d3x.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="Wrapping Paper Cutter">
+        <div class="desc">Wrapping Paper Cutter</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/USe24c06b437db1/design/2025-02-07_8a4e06b51378b.jpg?x-oss-process=image/resize,w_1000/format,webp" alt="Grocery Bag Holder">
+        <div class="desc">Grocery Bag Holder</div>
+      </div>
+       <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/DSM00000000570317/design/2024-08-03_64b8b74488d31.png?x-oss-process=image/resize,w_1000/format,webp" alt="Tooth Paste Squeezer">
+        <div class="desc">Tooth Paste Squeezer</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://makerworld.bblmw.com/makerworld/model/US33f38d3e84ba94/design/2024-10-21_adf67a250fc86.png?x-oss-process=image/resize,w_1920/format,webp" alt="Gravity Hanger - Towel Hook/Hanger">
+        <div class="desc">Gravity Hanger - Towel Hook/Hanger</div>
+      </div>
+    
+       
+    </div>
+    <p style="margin-top: 20px;">
+      <a href="https://wa.me/916305180709" target="_blank" class="cta-btn">Order via WhatsApp</a>
+    </p>
+  </section>
+
+  <section id="portfolio">
+    <h2 class="section-title">Our Work</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="https://i.imgur.com/oXpxQtJ.jpeg" alt="3D Model 1">
+        <div class="desc">Detailed Model</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.imgur.com/VaHWnRN.jpeg" alt="3D Model 2">
+        <div class="desc">Custom Figurine</div>
+      </div>
+    </div>
+  </section>
+  </section>
+  <section id="testimonials">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="card">
+      <p>"RC Prints delivered exactly what I needed for my DIY project. The quality is top-notch and service was fast!"</p>
+      <p><strong>- Akash Reddy</strong></p>
+    </div>
+    <div class="card">
+      <p>"Got a custom phone stand printed — looks amazing and was delivered in just 2 days. Highly recommend!"</p>
+      <p><strong>- Sneha Patel</strong></p>
+    </div>
+    <div class="card">
+      <p>"I sent them a rough idea and they helped me with design and printing. The final prototype was perfect!"</p>
+      <p><strong>- Mohan K.</strong></p>
+    </div>
+  </section>
+  <section id="owner-profile">
+    <h2 class="section-title">About the Owner</h2>
+    <div class="profile-container">
+      <img src="https://i.imgur.com/4HJbzEq.jpg" alt="Owner Photo" class="owner-photo">
+      <p>Hello! I'm Ramcharan, the founder of RC Prints. With a passion for 3D printing, I specialize in bringing your ideas to life with precision and creativity.</p>
+    </div>
+
+
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="card">
+      <p><strong>Name:</strong> P. Ramcharan</p>
+      <p><strong>Email:</strong> <a href="mailto:pallapothuramcharanvani@gmail.com">pallapothuramcharanvani@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+916305180709">+91 6305180709</a></p>
+      <p><strong>Social:</strong> <a class="instagram-link" href="https://instagram.com/3dprintingbyramcharan" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /> @3dprintingbyramcharan</a></p>
+      <p><strong>Location:</strong> <a href="https://maps.app.goo.gl/ATLJTb8TBEXTfaT58" target="_blank">Google Maps</a></p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 RC Prints. All rights reserved.
+  </footer>
+</body>
+</html>
